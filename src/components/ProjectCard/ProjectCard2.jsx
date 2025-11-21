@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ProjectCard2 = ({title, subTitle, description, url, technologies, colors, link}) => {
+const ProjectCard2 = ({title,imgUrl, subTitle, description, url, technologies, colors, link}) => {
     return (
           <div
           class="flex flex-col sm:flex-row gap-4 mt-12 sm:gap-20 items-center sm:mt-20 relative"
@@ -9,7 +9,7 @@ const ProjectCard2 = ({title, subTitle, description, url, technologies, colors, 
             <h3 style={{ color: colors }} class=" font-bold text-2xl md:text-4xl">
               {title}
             </h3>
-            <span class="text-[#ffe578] text-base md:text-lg"
+            <span style={{color: colors}} class="text-[#ffe578] text-base md:text-lg"
               >({subTitle})</span
             >
             <p class="text-justify text-sm md:text-base mt-2">
@@ -34,18 +34,20 @@ const ProjectCard2 = ({title, subTitle, description, url, technologies, colors, 
           <div style={{ borderColor: colors }}
             class="w-4 h-4 rounded-full border-[3px]  absolute left-1/2 -translate-x-1/2 bg-[#111] z-10 hover:scale-110 ease-in-out duration-100 hidden sm:block"
           ></div>
-          <a
-            href={link}
+          <a target='_blank'
+            href={url}
             class="order-1 sm:order-2 flex w-full relative justify-center sm:justify-start"
           >
             <div
               class="flex flex-col items-center relative group sm:hover:scale-105 ease-in-out duration-200 sm:ml-auto"
             >
-              <img style={{
-           filter: `drop-shadow(0 0 60px ${colors}90)` 
-              }}
-                class="max-w-[400px] w-full relative z-10 "
-                src={url}
+              <img 
+                style={{
+                            "--c": colors,
+                            boxShadow: "0 0px 60px color-mix(in srgb, var(--c) 60%, transparent)"
+                        }}
+                class="max-w-[550px] rounded-lg w-full relative z-10 "
+                src={imgUrl}
                 alt={title}
               />
               <span style={{ backgroundColor: colors }}

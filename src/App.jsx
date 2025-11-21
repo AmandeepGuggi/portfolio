@@ -1,17 +1,21 @@
 import { useState } from 'react'
 import Header from './components/Header/Header'
-import Hero from './components/Hero/Hero'
+import Hero from './pages/Hero'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
+import About from './pages/About'
+import Skills from './components/Skills/Skills'
 
 function App() {
   const [isDark, setIsdark] = useState(false)
 
   return (
-    <div className={` ${isDark ? 'bg-[#111]' : 'bg-white'} font-nunito `}>
+    <div id='home' className={` ${isDark ? 'bg-[#111]' : 'bg-white'} font-nunito `}>
       <Header />
       <div className='py-4 px-10 '>
         <Hero />
+        <About />
+        <Skills />
         <Projects />
         <Contact />
       </div>

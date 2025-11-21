@@ -1,12 +1,14 @@
-import React, { useState } from 'react'
+
+import MobileNav from '../MobileNav'
 import NavItem from './NavItems'
+// import { Link } from "react-dom";
+
 const Header = () => {
-    const [isDark, setIsDark] = useState(false)
   return (
       <header
         className="sticky top-0 z-50 py-3 px-10 flex items-center justify-between  gap-5 w-full  max-h-fit "
       >
-        <svg
+        {/* <svg
           width="80"
           height="103"
           viewBox="0 0 116 111"
@@ -50,33 +52,38 @@ const Header = () => {
               <stop offset="1" stop-color="#B0B2C3" />
             </linearGradient>
           </defs>
-        </svg>
+        </svg> */}
 
 <nav className=" hidden sm:flex border-gray-100 border rounded-3xl gap-6  md:gap-20 items-center justify-around px-5  bg-white shadow-sm max-h-[70px] ml-auto  ">
   {/* <div className="flex items-center justify-around gap-20 "> */}
-    <NavItem className={`relative text-lg text-gray-800 font-medium
+   <a href="#home"> <NavItem className={`relative text-lg text-gray-800 font-medium
              after:content-[''] after:absolute after:left-1/2 after:bottom-0
              after:h-0.5 after:w-0 after:bg-red-300 after:transition-all after:duration-300
-             hover:after:w-full hover:after:left-0`} icon="/assets/icons/home.svg" label="Home" />
-    <NavItem className={`relative text-lg text-gray-800 font-medium
+             hover:after:w-full hover:after:left-0`} icon="/assets/icons/home.svg" label="Home" /></a>
+   <a href="#about"> <NavItem className={`relative text-lg text-gray-800 font-medium
              after:content-[''] after:absolute after:left-1/2 after:bottom-0
              after:h-0.5 after:w-0 after:bg-red-300 after:transition-all after:duration-300
-             hover:after:w-full hover:after:left-0`}  icon= "/assets/icons/info.svg" label="About" />
-    <NavItem className={`relative text-lg text-gray-800 font-medium
+             hover:after:w-full hover:after:left-0`}  icon= "/assets/icons/info.svg" label="About" /></a>
+<a href="#projects">    <NavItem className={`relative text-lg text-gray-800 font-medium
              after:content-[''] after:absolute after:left-1/2 after:bottom-0
              after:h-0.5 after:w-0 after:bg-red-300 after:transition-all after:duration-300
-             hover:after:w-full hover:after:left-0`}  icon="/assets/icons/folder.svg" label="Projects" />
+             hover:after:w-full hover:after:left-0`}  icon="/assets/icons/folder.svg" label="Projects" /></a>
+  <a href='#contact'>
     <NavItem className={`relative text-lg text-gray-800 font-medium
              after:content-[''] after:absolute after:left-1/2 after:bottom-0
              after:h-0.5 after:w-0 after:bg-red-300 after:transition-all after:duration-300
              hover:after:w-full hover:after:left-0`}  icon="/assets/icons/email.svg" label="Contact" />
-    <img src="/assets/icons/sun.svg" alt="lightTheme" className='cursor-pointer  ' />
+  </a>
+    {/* <img src="/assets/icons/sun.svg" alt="lightTheme" className='cursor-pointer  ' /> */}
   {/* </div> */}
 </nav>
 
-      <div className='sm:hidden max-w-fit cursor-pointer  '>
+      {/* <div className='sm:hidden max-w-fit cursor-pointer  '>
         <img src="/assets/icons/menu.svg" alt="menu" className='w-10 h-10 ' />
-      </div>
+      </div> */}
+
+      {/* overlay */}
+      <MobileNav />
 
       </header>
   )

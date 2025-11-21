@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
   return (
-   <section class="max-w  pb-12">
+   <section id='contact' class="max-w pt-25 sm:pt-0 pb-12">
         <h2
           class="text-3xl sm:text-[40px]  relative z-10 font-bold px-4 py-2 w-max mx-auto text-center text-[#6F4E37] border-t rounded-md"
         >
@@ -10,8 +10,8 @@ const Contact = () => {
         </h2>
         <div class="flex  gap-6 flex-col md:flex-row items-center mt-10">
           <div class="w-full ">
-            <img src="./assets/images/aman.jpeg" alt="phone"
-             className='w-screen h-screen object-cover object-center blur-md' />
+            <img src="./assets/images/contact-me.svg" alt="phone"
+             className='w-screen' />
             
           </div>
           <form class="w-full" name="contactUS" netlify>
@@ -41,7 +41,7 @@ const Contact = () => {
                 id="name"
                 name="name"
                 class="bg-gray-50 border-2 outline-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#1788ae] focus:border-[#1788ae] block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-                placeholder="Amandeep Guggi"
+                placeholder="Enter your name"
               />
             </div>
             <label
@@ -73,7 +73,7 @@ const Contact = () => {
                 id="email"
                 name="email"
                 class="bg-gray-50 border-2 outline-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#1788ae] focus:border-[#1788ae] block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-                placeholder="name@amandeep.com"
+                placeholder="Enter your email"
               />
             </div>
             <label
@@ -94,7 +94,7 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              class="w-full text-white bg-[#1788ae] hover:bg-[#1280a4] focus:ring-4 focus:ring-[#4489a0] font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none"
+              class="w-full text-white bg-[#e0a48c] hover:bg-[#e46837] focus:ring-4 focus:ring-[#4489a0] font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none"
             >
               Send
             </button>

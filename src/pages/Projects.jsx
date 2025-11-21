@@ -4,52 +4,57 @@ import ProjectCard2 from '../components/ProjectCard/ProjectCard2'
 
 const Projects = () => {
   return (
-      <section id="latest-work" class="max-w-7xl mx-auto px-4 relative pb-8 sm:pb-16">
+      <section id="projects" class="max-w-7xl pt-15 mx-auto px-4 relative pb-8 sm:pb-16">
+        
+       
+
         <h2
           class="text-3xl bg-white sm:text-[40px] bg- relative z-10 font-bold px-4 py-2 w-max mx-auto text-center text-[#6F4E37] sm:border-b-2 border-[#6F4E37]"
         >
           Latest Works
         </h2>
-     
-       <ProjectCard  
+
+
+         <ProjectCard  
+       title="StoreIt"
+       colors='#f87275'
+       subTitle="Google Drive Clone"
+        imgUrl="/assets/images/p-1.png"
+       description="A full-stack Google Drive–like file manager where users can create folders, upload files using MongoDB , and browse a structured file–folder layout through a clean React + Tailwind UI. The backend (Node.js + Express) handles file storage and metadata, while the frontend renders everything dynamically with support for previews and responsive layouts. The project is still under development and not yet deployed, with upcoming features like authentication, sharing permissions, and cloud storage integration planned for future releases."
+       url="https://github.com/AmandeepGuggi/storage-system"
+        technologies={['Node.js', 'react.js', 'express', 'tailwind css', 'mongoose', 'javascript', 'figma']}
+       />
+       <ProjectCard2
        title="CrowdFunding"
        colors='#459bd5'
        subTitle="Blockchain Platform"
        description="Developing a decentralized crowdfunding platform using Thirdweb, React, and Vite, enabling secure
        and transparent fundraising on the blockchain. Integrating smart contracts for seamless contributions
        and fund management."
-       url="./assets/images/coder.svg"
+       imgUrl="/assets/images/p-2.png"
+       url="https://agcrowdfunding.netlify.app/"
         technologies={['thirdweb', 'react.js', 'vite', 'tailwind css', 'solidity', 'css', 'javascript', 'figma']}
        />
   
-        <ProjectCard2
+        <ProjectCard
        title="NoteNest"
-       colors='#ffe578'
+       colors='#020617'
        subTitle="Note taking web app"
-       description=" NoteNest is a React-based web app designed for seamless note-taking and organization. It features user authentication, note creation, deletion,
-               and archiving, ensuring a smooth and efficient experience."
-       url="./assets/images/girl.jpg"
-        technologies={['thirdweb', 'react.js', 'vite', 'tailwind css', 'solidity', 'css', 'javascript', 'figma']}
+       description=" NoteNest is a React-based a clean, minimal note-taking interface built as a solution to a Frontend Mentor challenge, focusing on pixel-accurate UI replication and functional note management. It includes features like creating, editing, organizing, and deleting notes, all managed on the client side with responsive layouts and accessible interactions. The project emphasizes component structure, state handling, and modern UI patterns, showcasing attention to detail, design consistency, and real-world frontend problem-solving."
+       imgUrl="/assets/images/p-4.png"
+       url="https://agnotenest.netlify.app/"
+        technologies={['react.js', 'redux', 'tailwind css', 'css', 'javascript', 'figma']}
        />
-       <ProjectCard  
-       title="CrowdFunding"
-       colors='#459bd5'
-       subTitle="Blockchain Platform"
-       description="Developing a decentralized crowdfunding platform using Thirdweb, React, and Vite, enabling secure
-       and transparent fundraising on the blockchain. Integrating smart contracts for seamless contributions
-       and fund management."
-       url="./assets/images/coder.svg"
-        technologies={['thirdweb', 'react.js', 'vite', 'tailwind css', 'solidity', 'css', 'javascript', 'figma']}
-       />
+   
   
         <ProjectCard2
-       title="NoteNest"
-       colors='#ffe578'
-       subTitle="Note taking web app"
-       description=" NoteNest is a React-based web app designed for seamless note-taking and organization. It features user authentication, note creation, deletion,
-               and archiving, ensuring a smooth and efficient experience."
-       url="./assets/images/girl.jpg"
-        technologies={['thirdweb', 'react.js', 'vite', 'tailwind css', 'solidity', 'css', 'javascript', 'figma']}
+       title="Weather App"
+       colors='#a8badc'
+       subTitle="Real-Time Weather Checker"
+       imgUrl="/assets/images/p-3.png"
+       description="A simple JavaScript-based weather app that fetches real-time temperature, humidity, and conditions using a public API and displays them in a clean, minimal UI. It allows users to search any city and instantly view the current weather with dynamic icons and responsive design."
+       url="agjavascriptweatherapp.netlify.app"
+        technologies={['HTML', 'CSS', 'javascript']}
        />
 
         {/* <div
@@ -236,7 +241,7 @@ const Projects = () => {
 
         
         <div
-          class="w-0.5 hidden sm:block bg-[#6F4E37] absolute top-0 bottom-0 left-1/2 -translate-x-1/2"
+          class="w-0.5 hidden sm:block bg-[#6F4E37] absolute top-15 bottom-0 left-1/2 -translate-x-1/2"
         ></div>
       </section> 
   )
